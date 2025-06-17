@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <!-- Кнопка для открытия списка файлов -->
+    <ImageButton
+        android:id="@+id/open_file_list_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Открыть список файлов"
+        android:src="@drawable/ic_folder_open_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Заголовок с информацией о текущем режиме -->
+    <TextView
+        android:id="@+id/mode_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Временная область"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/open_file_list_button"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <!-- График (занимает основное пространство) -->
+    <com.example.axel.LineChartView
+        android:id="@+id/line_chart_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/sensor_values_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mode_indicator" />
+
+    <!-- Панель с показаниями сенсоров -->
+    <LinearLayout
+        android:id="@+id/sensor_values_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/controls_layout">
+
+        <TextView
+            android:id="@+id/gyro_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X: 0.000"
+            android:textColor="#0000FF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/gyro_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y: 0.000"
+            android:textColor="#FF0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/gyro_z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z: 0.000"
+            android:textColor="#00FF00"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Панель управления -->
+    <LinearLayout
+        android:id="@+id/controls_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Кнопка для открытия FFTActivity -->
+        <Button
+            android:id="@+id/fft_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="FFT"
+            android:textAllCaps="false" />
+
+        <!-- Кнопка записи -->
+        <Button
+            android:id="@+id/record_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="▶"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Кнопка настроек (в правом верхнем углу) -->
+    <ImageButton
+        android:id="@+id/settings_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Settings"
+        android:src="@drawable/baseline_settings_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основные цвета -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Цвета приложения -->
+    <color name="app_primary_color">#6200EE</color> <!-- Оставил Material Design фиолетовый -->
+
+    <!-- Оттенки серого -->
+    <color name="gray_light">#FFE0E0E0</color> <!-- Добавил FF для прозрачности -->
+    <color name="gray_dark">#FF757575</color>
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="gray">#9E9E9E</color>
+</resources>

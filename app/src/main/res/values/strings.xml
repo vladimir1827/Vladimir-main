@@ -1,0 +1,14 @@
+<resources>
+    <string name="back_button_text">Назад</string>
+    <string name="settings_title">Настройки</string>
+    <string name="display_settings">Параметры отображения</string>
+    <string name="keep_screen_on_text">Не выключать экран</string>
+    <string name="keep_screen_on_desc">Переключатель для постоянного включения экрана</string>
+    <string name="refresh_rate_title">Частота обновления</string>
+    <string name="refresh_rate_desc">Регулировка частоты обновления данных</string>
+    <string name="refresh_rate_default">30 Hz</string>
+    <string name="about_app">О приложении</string>
+    <string name="app_version">Версия 1.0.0</string>
+    <string name="developer_name">Разработчик: Владимир</string>
+    <string name="app_name">Giroscop</string>
+</resources>

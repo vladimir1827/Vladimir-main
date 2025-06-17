@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white"
+    tools:context=".FFTActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Анализ Фурье"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/sampling_rate_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Частота дискретизации: 0 Гц"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp"
+                android:textColor="#607D8B"/>
+        </LinearLayout>
+
+        <!-- X Axis Charts -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:background="#F5F5F5"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ось X"
+                android:textColor="#0000FF"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <com.example.axel.LineChartView
+                android:id="@+id/raw_x_chart"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FFT спектр (X)"
+                android:textColor="#0000FF"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/fft_x_chart"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/white"
+                android:padding="4dp"/>
+        </LinearLayout>
+
+        <!-- Y Axis Charts -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:background="#F5F5F5"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ось Y"
+                android:textColor="#FF0000"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <com.example.axel.LineChartView
+                android:id="@+id/raw_y_chart"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FFT спектр (Y)"
+                android:textColor="#FF0000"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/fft_y_chart"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/white"
+                android:padding="4dp"/>
+        </LinearLayout>
+
+        <!-- Z Axis Charts -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ось Z"
+                android:textColor="#00AA00"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <com.example.axel.LineChartView
+                android:id="@+id/raw_z_chart"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FFT спектр (Z)"
+                android:textColor="#00AA00"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/fft_z_chart"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:color/white"
+                android:padding="4dp"/>
+        </LinearLayout>
+
+        <!-- Record Button -->
+        <Button
+            android:id="@+id/record_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="▶"
+            android:textSize="18sp"
+            android:paddingHorizontal="24dp"
+            android:backgroundTint="#3F51B5"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</ScrollView>
