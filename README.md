@@ -15,11 +15,11 @@
 1. Установите Android Studio с [официального сайта](https://developer.android.com/studio).
 2. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/vladimir1827/Vladimir.git
+   git clone https://github.com/vladimir1827/Vladimir-main.git
 3. Откройте проект в Android Studio: File > Open и выберите папку проекта.
 4. Подключите устройство или используйте эмулятор.
 5. Нажмите Run (зелёная кнопка Play).
 ### Способ 2: Установка APK-файла
-1. Скачайте APK-файл по "Ссылка будет добавлена в будущем".
+1. Скачайте APK-файл по "https://drive.google.com/file/d/1gbphLvZRDAZqFBNFA1yWiXxVfPmD9y4Z/view?usp=sharing".
 2. Установите APK-файл на ваше устройство.
 - Если установка заблокирована, включите "Неизвестные источники" в настройках устройства.
